@@ -41,7 +41,7 @@ Content-Type: application/json
 {
   "host": "{sender host}",
   "token": "{token}",
-  "expires-in": "{expires-in}",
+  "expires": "{expires}",
   "refresh-token": "{refresh-token}"
 }
 ```
@@ -51,8 +51,8 @@ The JSON data have following properties:
   Sender host
 - **token** string  
   A token to be used by the destination host to send a packet.
-- **expires-in** integer  
-  Seconds
+- **expires** integer  
+  A number of seconds from 1970-01-01T00:00:00Z without applying leap seconds.
 - **refresh-token**  
   A token to be used by the destination host to refresh the token.
 
@@ -74,7 +74,7 @@ Content-Type: application/json
 {
   "host": "{sender host}",
   "token": "{token}",
-  "expires-in": "{expires-in}",
+  "expires": "{expires}",
   "refresh-token": "{refresh-token}"
 }
 ```
@@ -84,8 +84,8 @@ The JSON data have following properties:
   Sender host
 - **token** string  
   A generated token to be used by the destination host to send a packet.
-- **expires-in** integer  
-  Seconds
+- **expires** integer  
+  A number of seconds from 1970-01-01T00:00:00Z without applying leap seconds.
 - **refresh-token**  
   A token to be used by the destination host to refresh the token.
 
@@ -114,7 +114,7 @@ The destination host:
 
   {
     "token": "{token}",
-    "expires-in": "{expires-in}",
+    "expires": "{expires}",
     "refresh-token": "{refresh-token}"
   }
   ```
@@ -122,8 +122,8 @@ The destination host:
   The JSON data have following properties:
   - **token** string  
     A new token.
-  - **expires-in** integer  
-    Seconds
+  - **expires** integer  
+    A number of seconds from 1970-01-01T00:00:00Z without applying leap seconds.
   - **refresh-token**  
     A new refresh token.
 - MUST returns an error response if the request is invalid.
