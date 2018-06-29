@@ -1,1 +1,1 @@
-# MOVED TO [GITLAB](https://github.com/yayaka/https-token-connection)
+# MOVED TO [GITLAB](https://gitlab.com/yayaka/https-token-connection)
